@@ -9,7 +9,7 @@ class ConvNetwork(nn.Module):
         self.conv2 = nn.Conv2d(6, 16, 5)
         self.fc1 = nn.Linear(16*59*59, 200)
         self.fc2 = nn.Linear(200, 100)
-        self.fc3 = nn.Linear(100, 38)
+        self.fc3 = nn.Linear(100, 38) # 38 represents number of people. Change this according to dataset you are using.
 
 
     def forward(self, image):
